@@ -1,10 +1,32 @@
 import profilePicture from '../../images/Hakeem_Ortiz_profilePicture.avif';
+import Card from './components/Card/Card';
 import Popup from './components/Popup/Popup';
 import EditAvatar from './components/EditAvatar/EditAvatar';
 import EditProfile from './components/EditProfile/EditProfile';
 import NewCard from './components/NewCard/NewCard';
 import RemoveCard from './components/RemoveCard/RemoveCard';
 import { useState } from 'react';
+
+const cards = [
+  {
+    isLiked: false,
+    _id: '5d1f0611d321eb4bdcd707dd',
+    name: 'Yosemite Valley',
+    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg',
+    owner: '5d1f0611d321eb4bdcd707dd',
+    createdAt: '2019-07-05T08:10:57.741Z',
+  },
+  {
+    isLiked: false,
+    _id: '5d1f064ed321eb4bdcd707de',
+    name: 'Lake Louise',
+    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg',
+    owner: '5d1f0611d321eb4bdcd707dd',
+    createdAt: '2019-07-05T08:11:58.324Z',
+  },
+];
+
+console.log(cards);
 
 export default function Main() {
   const [popup, setPopup] = useState(null);
@@ -41,7 +63,11 @@ export default function Main() {
         </div>
       </section>
 
-      <section className="elements"></section>
+      <ul className="elements">
+        {cards.map((card) => (
+          <Card key={card._id} card={card} />
+        ))}
+      </ul>
 
       {popup && (
         <Popup>
