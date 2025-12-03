@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 export default function Popup(props) {
-  const { title, children } = props;
+  const { children } = props;
 
   return (
-    <div className={`popup ${title}`}>
+    <div className="popup">
       {children}
     </div>
   );
