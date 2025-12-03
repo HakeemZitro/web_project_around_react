@@ -1,3 +1,4 @@
+import profilePicture from '../../images/Hakeem_Ortiz_profilePicture.avif';
 import Popup from './components/Popup/Popup';
 import EditAvatar from './components/EditAvatar/EditAvatar';
 import EditProfile from './components/EditProfile/EditProfile';
@@ -25,7 +26,7 @@ export default function Main() {
     <main className="content">
       <section className="profile">
         <div className="profile__image-box" onClick={() => handleOpenPopup(editAvatarPopup)}>
-          <img src="" alt="" className="profile__image" />
+          <img src={profilePicture} alt="" className="profile__image" />
           <div className="profile__edit-image"></div>
         </div>
         <div className="profile__info">
