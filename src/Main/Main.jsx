@@ -4,7 +4,6 @@ import Popup from './components/Popup/Popup';
 import EditAvatar from './components/EditAvatar/EditAvatar';
 import EditProfile from './components/EditProfile/EditProfile';
 import NewCard from './components/NewCard/NewCard';
-import RemoveCard from './components/RemoveCard/RemoveCard';
 import { useState } from 'react';
 
 const cards = [
@@ -34,7 +33,6 @@ export default function Main() {
   const editAvatarPopup = { children: <EditAvatar title="Cambiar Foto de Perfil" onClose={handleClosePopup} /> };
   const editProfilePopup = { children: <EditProfile title="Editar Perfil" onClose={handleClosePopup} /> };
   const newCardPopup = { children: <NewCard title="Nuevo lugar" onClose={handleClosePopup} /> };
-  const removeCardPopup = { children: <RemoveCard title="¿Estás seguro?" onClose={handleClosePopup} /> };
 
   function handleOpenPopup(popup) {
     setPopup(popup);
@@ -65,7 +63,7 @@ export default function Main() {
 
       <ul className="elements">
         {cards.map((card) => (
-          <Card key={card._id} card={card} />
+          <Card key={card._id} card={card} openFull={handleOpenPopup} onClose={handleClosePopup} />
         ))}
       </ul>
 
