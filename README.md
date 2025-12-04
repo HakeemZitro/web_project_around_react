@@ -1,18 +1,23 @@
-# Tripleten web_project_around_react
+# Tripleten web_project_around_react (Project 14)
 
-# React + Vite
+Aplicación Web para la red social de Around the U.S., donde podrás subir tus fotos favoritas, editar tu perfil y dar like a las publicaciones de tus fotos. La página utiliza la librería de React con JSX.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Características del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite
+- HTML / CSS / JS
+- React / JSX
+- Componentes Funcionales
+- React Hooks (useState)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Visita la Aplicación Web
+https://hakeemzitro.github.io/web_project_around_react/
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Vista Previa de la Aplicación Web
+
+![Página Principal](./images/project_screenshots/Initial_Page.avif)
+![Agregando una Publicación](./images/project_screenshots/Adding_Post.avif)
+![Imagen a tamaño completo](./images/project_screenshots/Full_Image.avif)

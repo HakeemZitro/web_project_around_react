@@ -6,7 +6,7 @@
   color: #545454;
 }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 576px) {
   .footer {
     margin: 50px 0 0;
   }

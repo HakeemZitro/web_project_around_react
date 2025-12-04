@@ -16,12 +16,20 @@ const cards = [
     createdAt: '2019-07-05T08:10:57.741Z',
   },
   {
-    isLiked: false,
+    isLiked: true,
     _id: '5d1f064ed321eb4bdcd707de',
     name: 'Lake Louise',
     link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg',
     owner: '5d1f0611d321eb4bdcd707dd',
     createdAt: '2019-07-05T08:11:58.324Z',
+  },
+  {
+    isLiked: false,
+    _id: '5d1f068ad321eb4bdcd707df',
+    name: 'Latemar',
+    link: 'https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg',
+    owner: '5d1f0611d321eb4bdcd707dd',
+    createdAt: '2019-07-05T08:12:59.324Z',
   },
 ];
 

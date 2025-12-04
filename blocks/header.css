@@ -9,7 +9,7 @@
   height: 33px;
 }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 576px) {
   .header {
     height: 56px;
   }

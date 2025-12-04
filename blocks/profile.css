@@ -96,7 +96,7 @@
   aspect-ratio: 1 / 1;
 }
 
-@media screen and (max-width: 544px) {
+@media screen and (max-width: 576px) {
   .profile {
     margin-top: 42px;
     flex-direction: column;
