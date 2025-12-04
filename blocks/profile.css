@@ -27,7 +27,7 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: url('../images/Edit_Profile_Picture.svg') no-repeat center;
+  background: url('../src/assets/Edit_Profile_Picture.svg') no-repeat center;
   background-color: #00000088;
 }
 

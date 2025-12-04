@@ -1,4 +1,4 @@
-import profilePicture from '../../images/Hakeem_Ortiz_profilePicture.avif';
+import profilePicture from '../assets/Hakeem_Ortiz_profilePicture.avif';
 import Card from './components/Card/Card';
 import Popup from './components/Popup/Popup';
 import EditAvatar from './components/EditAvatar/EditAvatar';
@@ -60,12 +60,12 @@ export default function Main() {
         <div className="profile__info">
           <div className="profile__info-group">
             <h1 className="profile__name">Hakeem Ortiz</h1>
-            <img src="./images/Edit_Button.svg" alt="Icono para editar la información del perfil" className="profile__edit-button" onClick={() => handleOpenPopup(editProfilePopup)} />
+            <img src="../assets/Edit_Button.svg" alt="Icono para editar la información del perfil" className="profile__edit-button" onClick={() => handleOpenPopup(editProfilePopup)} />
           </div>
           <p className="profile__description">Aspirante a Desarrollador Web</p>
         </div>
         <div className="profile__add-button" onClick={() => handleOpenPopup(newCardPopup)}>
-          <img src="./images/Add_Icon.svg" alt="Icono para agregar elementos a la galería" className="profile__add-button-icon" />
+          <img src="../assets/Add_Icon.svg" alt="Icono para agregar elementos a la galería" className="profile__add-button-icon" />
         </div>
       </section>
 

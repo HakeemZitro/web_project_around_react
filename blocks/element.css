@@ -52,7 +52,7 @@
   display: block;
   min-width: 21px;
   height: 19px;
-  background: url("../images/Like_Icon.svg");
+  background: url("../src/assets/Like_Icon.svg");
   border: none;
   cursor: pointer;
   transition: .3s;
@@ -64,5 +64,5 @@
 }
 
 .element__like_active {
-  background: url("../images/Liked_Icon.svg");
+  background: url("../src/assets/Liked_Icon.svg");
 }

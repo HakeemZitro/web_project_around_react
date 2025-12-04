@@ -16,7 +16,7 @@ export default function NewCard(props) {
           <span className="popup__error link-input-error"></span>
         </label>
         <button type="submit" className="popup__button">Crear</button>
-        <img src="./images/Close_Icon.svg" alt="Icono para cerrar la ventana emergente" className="popup__close-button" onClick={onClose} />
+        <img src="../../../assets/Close_Icon.svg" alt="Icono para cerrar la ventana emergente" className="popup__close-button" onClick={onClose} />
       </form>
     </Popup>
   );
