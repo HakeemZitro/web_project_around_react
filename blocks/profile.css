@@ -71,6 +71,7 @@
 }
 
 .profile__description {
+  margin: 0;
   font-size: clamp(14px, 1.636px + 2.273vw, 18px);
   line-height: 1.2;
   text-overflow: ellipsis;
