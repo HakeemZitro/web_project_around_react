@@ -1,3 +1,4 @@
+import closeIcon from '../../../assets/Close_Icon.svg';
 import Popup from '../Popup/Popup';
 
 export default function EditAvatar(props) {
@@ -12,7 +13,7 @@ export default function EditAvatar(props) {
           <span className="popup__error profile-picture-input-error"></span>
         </label>
         <button type="submit" className="popup__button">Guardar</button>
-        <img src="../../../assets/Close_Icon.svg" alt="Icono para cerrar la ventana emergente" className="popup__close-button" onClick={onClose} />
+        <img src={closeIcon} alt="Icono para cerrar la ventana emergente" className="popup__close-button" onClick={onClose} />
       </form>
     </Popup>
   );
