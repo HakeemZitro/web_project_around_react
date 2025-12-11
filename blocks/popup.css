@@ -38,6 +38,7 @@
 }
 
 .popup__title {
+  margin: 0;
   font-size: 24px;
   font-weight: 900;
   line-height: 1;
@@ -123,7 +124,9 @@
 }
 
 .popup__image-title {
+  margin: 0;
   font-size: 12px;
+  font-weight: 400;
   color: #fff;
 }
 
