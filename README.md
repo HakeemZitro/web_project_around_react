@@ -1,4 +1,4 @@
-# Tripleten web_project_around_react (Project 14)
+# Tripleten web_project_around_react (Project 15)
 
 Aplicación Web para la red social de Around the U.S., donde podrás subir tus fotos favoritas, editar tu perfil y dar like a las publicaciones de tus fotos. La página utiliza la librería de React con JSX.
 
@@ -9,7 +9,8 @@ Aplicación Web para la red social de Around the U.S., donde podrás subir tus f
 - HTML / CSS / JS
 - React / JSX
 - Componentes Funcionales
-- React Hooks (useState)
+- React Hooks (useState / useEffect / useContext / useRef)
+- Funciones Asíncronas para solicitudes HTTP a REST API
 
 
 ## Visita la Aplicación Web
