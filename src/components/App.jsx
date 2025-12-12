@@ -1,8 +1,8 @@
 import Header from './Header/Header';
 import Main from './Main/Main';
 import Footer from './Footer/Footer';
-import { CurrentUserContext } from './contexts/CurrentUserContext.js';
-import { api } from './Main/components/Utils/Api.js';
+import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
+import { api } from '../utils/Api.js';
 import { useState, useEffect } from 'react';
 
 

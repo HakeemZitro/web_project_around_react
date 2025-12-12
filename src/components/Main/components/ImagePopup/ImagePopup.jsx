@@ -1,4 +1,4 @@
-import closeIcon from '../../../assets/Close_Icon.svg';
+import closeIcon from '../../../../assets/Close_Icon.svg';
 import Popup from '../Popup/Popup';
 
 export default function ImagePopup(props) {

@@ -1,4 +1,4 @@
-import trash from '../../../assets/Trash.svg';
+import trash from '../../../../assets/Trash.svg';
 import ImagePopup from '../ImagePopup/ImagePopup';
 import RemoveCard from '../RemoveCard/RemoveCard';
 
