@@ -33,6 +33,18 @@ export default function Main() {
       .catch(err => console.log(err));
   }, [])
 
+  async function handleCardLike(card) {
+    await api.changeCardLikeStatus(card.isLiked, card._id)
+    .then(newCard => {setCards((cards) => cards.map((currentCard) => currentCard._id === card._id ? newCard : currentCard));})
+    .catch(err => console.log(err));
+  }
+
+  async function handleCardDelete(card) {
+    await api.deleteCard(card._id)
+    .then(() => {setCards((cards) => cards.filter((currentCard) => currentCard._id !== card._id));})
+    .catch(err => console.log(err));
+  }
+
   return (
     <main className="content">
       <section className="profile">
@@ -54,7 +66,7 @@ export default function Main() {
 
       <ul className="elements">
         {cards.map((card) => (
-          <Card key={card._id} card={card} openFull={handleOpenPopup} onClose={handleClosePopup} />
+          <Card key={card._id} card={card} openFull={handleOpenPopup} onClose={handleClosePopup} onCardLike={handleCardLike} onCardDelete={handleCardDelete}/>
         ))}
       </ul>
 

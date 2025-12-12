@@ -85,11 +85,10 @@ class Api {
     return this._request("deleteCard", { id: cardId });
   }
 
-  addLike(cardId) {
-    return this._request("likeCard", { id: cardId });
-  }
-
-  removeLike(cardId) {
+  changeCardLikeStatus(isLiked, cardId) {
+    if (!isLiked) {
+      return this._request("likeCard", { id: cardId });
+    }
     return this._request("unlikeCard", { id: cardId });
   }
 
