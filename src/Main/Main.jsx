@@ -5,37 +5,17 @@ import Popup from './components/Popup/Popup';
 import EditAvatar from './components/EditAvatar/EditAvatar';
 import EditProfile from './components/EditProfile/EditProfile';
 import NewCard from './components/NewCard/NewCard';
-import { api } from './components/Utils/Api.js';
 import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
-import { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
 
 
 export default function Main(props) {
-  const { onOpenPopup, onClosePopup, popup } = props;
-  const [cards, setCards] = useState([]);
+  const { onOpenPopup, onClosePopup, popup, onCardLike, onCardDelete, cards } = props;
   const { currentUser } = useContext(CurrentUserContext);
 
   const editAvatarPopup = { children: <EditAvatar title="Cambiar Foto de Perfil" onClose={onClosePopup} /> };
   const editProfilePopup = { children: <EditProfile title="Editar Perfil" onClose={onClosePopup} /> };
   const newCardPopup = { children: <NewCard title="Nuevo lugar" onClose={onClosePopup} /> };
-
-  useEffect(() => {
-      api.getCards()
-      .then(res => setCards(res))
-      .catch(err => console.log(err));
-  }, [])
-
-  async function handleCardLike(card) {
-    await api.changeCardLikeStatus(card.isLiked, card._id)
-    .then(newCard => {setCards((cards) => cards.map((currentCard) => currentCard._id === card._id ? newCard : currentCard));})
-    .catch(err => console.log(err));
-  }
-
-  async function handleCardDelete(card) {
-    await api.deleteCard(card._id)
-    .then(() => {setCards((cards) => cards.filter((currentCard) => currentCard._id !== card._id));})
-    .catch(err => console.log(err));
-  }
 
   return (
     <main className="content">
@@ -58,7 +38,7 @@ export default function Main(props) {
 
       <ul className="elements">
         {cards.map((card) => (
-          <Card key={card._id} card={card} openFull={onOpenPopup} onClose={onClosePopup} onCardLike={handleCardLike} onCardDelete={handleCardDelete}/>
+          <Card key={card._id} card={card} openFull={onOpenPopup} onClose={onClosePopup} onCardLike={onCardLike} onCardDelete={onCardDelete}/>
         ))}
       </ul>
 
