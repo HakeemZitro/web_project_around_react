@@ -10,22 +10,14 @@ import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
 import { useState, useEffect, useContext } from 'react';
 
 
-export default function Main() {
-  const [popup, setPopup] = useState(null);
+export default function Main(props) {
+  const { onOpenPopup, onClosePopup, popup } = props;
   const [cards, setCards] = useState([]);
-  const currentUser = useContext(CurrentUserContext);
+  const { currentUser } = useContext(CurrentUserContext);
 
-  const editAvatarPopup = { children: <EditAvatar title="Cambiar Foto de Perfil" onClose={handleClosePopup} /> };
-  const editProfilePopup = { children: <EditProfile title="Editar Perfil" onClose={handleClosePopup} /> };
-  const newCardPopup = { children: <NewCard title="Nuevo lugar" onClose={handleClosePopup} /> };
-
-  function handleOpenPopup(popup) {
-    setPopup(popup);
-  }
-
-  function handleClosePopup() {
-    setPopup(null);
-  }
+  const editAvatarPopup = { children: <EditAvatar title="Cambiar Foto de Perfil" onClose={onClosePopup} /> };
+  const editProfilePopup = { children: <EditProfile title="Editar Perfil" onClose={onClosePopup} /> };
+  const newCardPopup = { children: <NewCard title="Nuevo lugar" onClose={onClosePopup} /> };
 
   useEffect(() => {
       api.getCards()
@@ -48,25 +40,25 @@ export default function Main() {
   return (
     <main className="content">
       <section className="profile">
-        <div className="profile__image-box" onClick={() => handleOpenPopup(editAvatarPopup)}>
+        <div className="profile__image-box" onClick={() => onOpenPopup(editAvatarPopup)}>
           <img src={currentUser.avatar} alt="" className="profile__image" />
           <div className="profile__edit-image"></div>
         </div>
         <div className="profile__info">
           <div className="profile__info-group">
             <h1 className="profile__name">{currentUser.name}</h1>
-            <img src={editButton} alt="Icono para editar la información del perfil" className="profile__edit-button" onClick={() => handleOpenPopup(editProfilePopup)} />
+            <img src={editButton} alt="Icono para editar la información del perfil" className="profile__edit-button" onClick={() => onOpenPopup(editProfilePopup)} />
           </div>
           <p className="profile__description">{currentUser.about}</p>
         </div>
-        <div className="profile__add-button" onClick={() => handleOpenPopup(newCardPopup)}>
+        <div className="profile__add-button" onClick={() => onOpenPopup(newCardPopup)}>
           <img src={addIcon} alt="Icono para agregar elementos a la galería" className="profile__add-button-icon" />
         </div>
       </section>
 
       <ul className="elements">
         {cards.map((card) => (
-          <Card key={card._id} card={card} openFull={handleOpenPopup} onClose={handleClosePopup} onCardLike={handleCardLike} onCardDelete={handleCardDelete}/>
+          <Card key={card._id} card={card} openFull={onOpenPopup} onClose={onClosePopup} onCardLike={handleCardLike} onCardDelete={handleCardDelete}/>
         ))}
       </ul>
 
